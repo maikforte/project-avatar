@@ -16,9 +16,11 @@ app.use((req, res, next) => {
 
 // App Components
 const helloWorld = require('./app/hello-world')();
+const scholar = require('./app/scholar')();
 
 // Routes
 app.use(helloWorld);
+app.use(scholar);
 
 app.listen(config.port, () => {
     console.log(`Listening on port: ${config.port}...`);
